@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>إلى جمانة</title>
+    <title>إلى طيبة</title>
     <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     
@@ -121,6 +121,7 @@
         .message-box {
             background: rgba(0, 0, 0, 0.3); padding: 30px; border-radius: 20px;
             border-top: 3px solid #ff9ed2; border-bottom: 3px solid #ff9ed2; max-width: 90%;
+            line-height: 2; font-size: 1.6rem;
         }
 
         .random-reason-box {
@@ -145,17 +146,17 @@
 <body>
 
     <audio id="bg-music" loop>
-        <source src="https://www.ma7room.com/musicsbox/mp3s/3ed-3mri-Wled-Alshami-Ma7rooM.CoM.mp3
-" type="audio/mp4">
+        <source src="https://serv2.bregaraab.com/songs_2021/bregaraab.Com_magd_almhnds_alhb_alabdy_-_ma_asalh.mp3" type="audio/mpeg">
     </audio>
 
     <div class="hearts-bg" id="hearts-bg"></div>
 
     <div class="container">
+        <!-- شاشة تسجيل الدخول -->
         <div class="screen active" id="screen-0">
-            <h1 style="font-size: 2.5rem;">🔒 سؤال الأمان</h1>
-            <p>للعبور، يجب أن تجيبي على هذا السؤال:</p>
-            <h2 style="color: #ff9ed2; font-family: 'Tajawal', sans-serif;">متى تاريخ عودة علاقتنا؟</h2>
+            <h1 style="font-size: 2.5rem;">🔒 مفتاح الروح</h1>
+            <p>لتعبري إلى عالمنا، أخبريني:</p>
+            <h2 style="color: #ff9ed2; font-family: 'Tajawal', sans-serif;">متى كان أول لقاء لأرواحنا؟</h2>
             
             <input type="text" id="security-answer" class="input-field" placeholder="أدخلي التاريخ هنا..." autocomplete="off">
             <div id="error-msg" class="error-msg"></div>
@@ -163,12 +164,13 @@
             <button class="btn-pulse" onclick="checkSecurityAnswer()">دخول ❤️</button>
         </div>
 
+        <!-- الشاشة الأولى -->
         <div class="screen" id="screen-1">
-            <h1 style="font-size: 4rem;">🌙</h1>
-            <h2>كل عام وأنتي بخير يا أجمل أشيائي</h2>
-            <p style="color: #ff9ed2; font-size: 1.8rem; font-family: 'Aref Ruqaa';">من علي ❤️</p>
+            <h1 style="font-size: 4rem;">✨</h1>
+            <h2>إلى النور الذي أضاء عتمتي... طيبة</h2>
+            <p style="color: #ff9ed2; font-size: 1.8rem; font-family: 'Aref Ruqaa';">من علي قربان ❤️</p>
             
-            <p style="font-size: 1.2rem; margin-bottom: 5px; color: #ddd;">نحن معاً منذ أن بدأت قصتنا:</p>
+            <p style="font-size: 1.2rem; margin-bottom: 5px; color: #ddd;">نحن معاً منذ أن بدأت أجمل صدفة:</p>
             <div class="counter-container">
                 <div class="time-box"><span id="c-days">0</span><p>يوم</p></div>
                 <div class="time-box"><span id="c-hours">00</span><p>ساعة</p></div>
@@ -176,24 +178,27 @@
                 <div class="time-box"><span id="c-seconds">00</span><p>ثانية</p></div>
             </div>
 
-            <button class="btn" onclick="nextScreen(2)">أكملي القراءة</button>
+            <button class="btn" onclick="nextScreen(2)">اقرأي ما في قلبي</button>
         </div>
 
+        <!-- الشاشة الثانية: رسالة حب عميقة -->
         <div class="screen" id="screen-2">
             <div class="message-box">
-                <p>"جمانة الغالية،<br>أردت أن أصنع لكِ شيئاً مميزاً يشبهك. أنتِ أجمل صدفة في حياتي، وكل عام وأنتِ الأقرب لقلبي."</p>
+                <p>"طيبة يا من سكنتِ الروح والوجدان،<br>لم تكوني يوماً مجرد صدفة، بل أنتِ  التي صاغها القدر من أجلي. معكِ، وجدت ملاذي وسكينتي، وتلونت أيامي بدفء وجودك. أنتِ لستِ فقط نصف قلبي، بل أنتِ النبض الذي يحييه."</p>
             </div>
-            <button class="btn" onclick="nextScreen(3)">التالي</button>
+            <button class="btn" onclick="nextScreen(3)">تعمقي أكثر</button>
         </div>
 
+        <!-- الشاشة الثالثة: أسباب الحب -->
         <div class="screen" id="screen-3">
-            <h2>لماذا أحبك يا جمانة؟ 💖</h2>
-            <div class="random-reason-box" id="reason-text">اضغطي على الزر لتعرفي...</div>
-            <button class="btn" onclick="generateReason()" style="background: #ff1493; border:none;">اضغطي هنا لمعرفة سبب 🌸</button>
+            <h2>لماذا أحبكِ يا طيبة؟ 💖</h2>
+            <div class="random-reason-box" id="reason-text">اضغطي على الزر لتعرفي سراً من أسراري...</div>
+            <button class="btn" onclick="generateReason()" style="background: #ff1493; border:none;">اضغطي هنا 🌸</button>
             <br>
             <button class="btn" onclick="nextScreen(4)">شاهد ذكرياتنا</button>
         </div>
 
+        <!-- الشاشة الرابعة: الألبوم -->
         <div class="screen" id="screen-4">
             <h2>ألبوم الذكريات 📸</h2>
             <div class="album-container">
@@ -220,21 +225,24 @@
             const answer = document.getElementById('security-answer').value.trim();
             const errorMsg = document.getElementById('error-msg');
             
-            if (answer === "15/1/2026" || answer === "15-1-2026" || answer === "2026/1/15" || answer === "١٥/١/٢٠٢٦") {
+            if (answer === "25/6/2025" || answer === "25-6-2025" || answer === "2025/6/25" || answer === "٢٥/٦/٢٠٢٥") {
                 errorMsg.innerText = ""; 
                 document.getElementById('security-answer').value = ""; 
                 nextScreen(1); 
             } else {
-                errorMsg.innerText = "التاريخ غير صحيح، حاولي تتذكرين يا روحي! ";
+                errorMsg.innerText = "التاريخ غير صحيح، حاولي أن تتذكري يا نبض قلبي! ";
             }
         }
 
-        // تاريخ بداية العلاقة 20/3/2024
-        const startDate = new Date("2024-03-20T00:00:00").getTime();
+        // تاريخ التعارف 25/6/2025
+        const startDate = new Date("2025-06-25T00:00:00").getTime();
 
         function updateLoveCounter() {
             const now = new Date().getTime();
             const difference = now - startDate;
+
+            // التأكد من أن التاريخ قد مر لتجنب الأرقام السالبة
+            if (difference < 0) return;
 
             const days = Math.floor(difference / (1000 * 60 * 60 * 24));
             const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -248,6 +256,8 @@
         }
         
         setInterval(updateLoveCounter, 1000);
+        // تحديث أولي حتى لا تظهر الأصفار في البداية
+        updateLoveCounter(); 
 
         function nextScreen(screenIndex) {
             document.querySelectorAll('.screen').forEach(screen => {
@@ -257,7 +267,7 @@
 
             if(screenIndex === 1) {
                 var audio = document.getElementById('bg-music');
-                audio.play().catch(e => console.log("تحتاج المستخدمة للتفاعل"));
+                audio.play().catch(e => console.log("تحتاج تفاعل"));
                 fireConfetti();
             }
             
@@ -281,11 +291,11 @@
         }
 
         const reasons = [
-            "لأن احب وجودك ✨",
-            "لأن تفهمينني دائما",
-            "لأن عندج احن كلب بهل الدنيا ❤️",
-            "لأن هوايييي احبج ",
-            "لأن انت... جمانة! "
+            "لأنكِ القصيدة التي لم تُكتب بعد ✨",
+            "لأن في عينيكِ أرى طمأنينتي وملاذي",
+            "لأنكِ تملكين أحن وأرق قلب في هذا العالم ❤️",
+            "لأن تفاصيلك الصغيرة هي أعظم انتصاراتي",
+            "لأنكِ باختصار... طيبة! "
         ];
 
         function generateReason() {
